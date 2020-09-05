@@ -50,7 +50,7 @@ const Feed = ({ history, playSound }) => {
     setTimeout(() => {
       history.push("/eating");
     }, 3000);
-  }, [foodBigQuery, dogImageQuery]);
+  }, [foodBigQuery, dogImageQuery, history, playSound]);
 
   return (
     <div id="feed">

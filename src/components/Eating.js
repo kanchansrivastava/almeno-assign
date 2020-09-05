@@ -1,10 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
-import dogSitting from "../images/dogSitting.svg";
 import dogEating from "../images/dogEating.svg";
-import vessel from "../images/vessel.svg";
 import foodSmall from "../images/foodSmall.png";
-import foodBig from "../images/foodBig.png";
 import { TweenMax } from "gsap";
 import { Howl } from "howler";
 

@@ -49,9 +49,9 @@ const Click = ({ playSound }) => {
               >
                 Share with Milo
               </Link>
-              <Link className="take-button btn" onClick={handleButtonClick}>
+              <h2 className="take-button btn" onClick={handleButtonClick}>
                 Take again
-              </Link>
+              </h2>
             </div>
           )}
         </div>

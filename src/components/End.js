@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import dogSitting from "../images/dogSitting.svg";
 import vessel from "../images/vessel.svg";
-import bwarf1 from "../images/bwarf.svg";
 import bwarf2 from "../images/bwarf.png";
 import { TweenMax } from "gsap";
 import { Howl } from "howler";
@@ -45,7 +44,7 @@ const End = ({ history, playSound }) => {
     setTimeout(() => {
       history.push("/");
     }, 3000);
-  }, [dogImageQuery]);
+  }, [dogImageQuery, history]);
   return (
     <div id="end">
       <div id="feed">
