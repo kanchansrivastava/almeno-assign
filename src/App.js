@@ -8,33 +8,41 @@ import Eating from "./components/Eating";
 import End from "./components/End";
 import { Howl } from "howler";
 import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function App() {
   const [playMusic, setPlayMusic] = useState(true);
   const [playSound, setPlaySound] = useState(true);
-  var musicSound;
-  useEffect(() => {
-    musicSound = new Howl({
+  let musicSound = useRef(
+    new Howl({
       loop: true,
       autoplay: true,
       volume: 0.2,
       src: ["./sounds/bg1.mp3"],
-    });
+    })
+  );
+  // var musicSound;
+  useEffect(() => {
+    // musicSound = new Howl({
+    //   loop: true,
+    //   autoplay: true,
+    //   volume: 0.2,
+    //   src: ["./sounds/bg1.mp3"],
+    // });
     if (playMusic) {
-      musicSound.play();
+      musicSound.current.play();
     } else {
-      musicSound.stop();
+      musicSound.current.stop();
     }
-  }, [playMusic, musicSound]);
+  }, [playMusic]);
 
   const handleMusicSetting = (e) => {
-    playMusic !== true ? musicSound.play() : musicSound.stop();
+    playMusic !== true ? musicSound.current.play() : musicSound.current.stop();
     setPlayMusic(!playMusic);
   };
   const handleSoundSetting = (e) => {
     setPlaySound(!playSound);
-    // musicSound === true ? musicSound.play() : musicSound.stop();
+    // musicSound.current === true ? musicSound.current.play() : musicSound.current.stop();
   };
   return (
     <div className="App">

@@ -19,11 +19,11 @@ const Home = ({
     <div id="home">
       <div className="screen">
         <div className="sound-controller">
-          <i
+          {/* <i
             className="fas fa-music"
             style={{ color: !playMusic && "#fff" }}
             onClick={handleMusicSetting}
-          ></i>
+          ></i> */}
           {/* <i
             className="fas fa-volume-up"
             style={{ color: !playSound && "#fff" }}
