@@ -29,8 +29,8 @@ function App() {
   }, [playMusic, musicSound]);
 
   const handleMusicSetting = (e) => {
+    playMusic !== true ? musicSound.play() : musicSound.stop();
     setPlayMusic(!playMusic);
-    musicSound === true ? musicSound.play() : musicSound.stop();
   };
   const handleSoundSetting = (e) => {
     setPlaySound(!playSound);

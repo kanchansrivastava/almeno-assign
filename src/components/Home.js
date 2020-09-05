@@ -24,11 +24,11 @@ const Home = ({
             style={{ color: !playMusic && "#fff" }}
             onClick={handleMusicSetting}
           ></i>
-          <i
+          {/* <i
             className="fas fa-volume-up"
             style={{ color: !playSound && "#fff" }}
             onClick={handleSoundSetting}
-          ></i>
+          ></i> */}
         </div>
         <div className="wrapper">
           <div className="dog">

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { Howl } from "howler";
 
 const Click = ({ playSound }) => {
-  console.log(playSound);
   var clickSound = new Howl({
     src: ["../sounds/button-click.mp3"],
   });
