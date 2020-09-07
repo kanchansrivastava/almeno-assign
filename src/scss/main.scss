@@ -367,10 +367,15 @@
       text-align: center;
       position: relative;
       top: 2rem;
-      left: -1rem;
+      left: 0rem;
+      & img:nth-child(1) {
+        position: relative;
+        bottom: 1.5rem;
+      }
+
       & img.food-small {
         position: absolute;
-        top: 17%;
+        top: -3%;
         left: 50%;
         transform: translate(-50%, -50%);
         opacity: 0;

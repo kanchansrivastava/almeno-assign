@@ -47,12 +47,12 @@ const Feed = ({ history, playSound, location }) => {
       "+=3"
     );
 
-    setTimeout(() => {
-      history.push({
-        pathname: "/eating",
-        state: { imgSrc: location.state.imgSrc },
-      });
-    }, 3000);
+    // setTimeout(() => {
+    //   history.push({
+    //     pathname: "/eating",
+    //     state: { imgSrc: location.state.imgSrc },
+    //   });
+    // }, 3000);
   }, [foodBigQuery, dogImageQuery, history, playSound, location.state.imgSrc]);
 
   return (
