@@ -9,6 +9,7 @@ import End from "./components/End";
 import { Howl } from "howler";
 import { useEffect } from "react";
 import { useState, useRef } from "react";
+import Camera from "./components/Camera";
 
 function App() {
   const [playMusic, setPlayMusic] = useState(true);
@@ -65,6 +66,11 @@ function App() {
             path="/click"
             exact
             render={(props) => <Click {...props} playSound={playSound} />}
+          />
+          <Route
+            path="/camera"
+            exact
+            render={(props) => <Camera {...props} playSound={playSound} />}
           />
           <Route
             path="/feed"

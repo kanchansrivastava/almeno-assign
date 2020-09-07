@@ -4,7 +4,7 @@ import camera from "../images/camera.svg";
 import { Link } from "react-router-dom";
 import { Howl } from "howler";
 
-const Click = ({ playSound }) => {
+const Click = ({ playSound, history }) => {
   var clickSound = new Howl({
     src: ["../sounds/button-click.mp3"],
   });
@@ -29,8 +29,11 @@ const Click = ({ playSound }) => {
           {!photoTaken ? (
             <Link
               className="camera-button btn"
-              to={{ pathname: "/click" }}
-              onClick={handleButtonClick}
+              // to={{ pathname: "/click" }}
+              onClick={() => {
+                handleButtonClick();
+                history.push("/camera");
+              }}
             >
               <img src={camera} alt="" />
             </Link>
