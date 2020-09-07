@@ -53,7 +53,7 @@ const Feed = ({ history, playSound, location }) => {
         state: { imgSrc: location.state.imgSrc },
       });
     }, 3000);
-  }, [foodBigQuery, dogImageQuery, history, playSound]);
+  }, [foodBigQuery, dogImageQuery, history, playSound, location.state.imgSrc]);
 
   return (
     <div id="feed">
