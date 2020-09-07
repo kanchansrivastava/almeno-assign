@@ -24,7 +24,7 @@ const Click2 = ({ playSound, history, location }) => {
         <div className="wrapper">
           <div className="heading">Click a picture of your meal</div>
           <div className="vessel">
-            <img src={foodBig} alt="" />
+            <img src={location.state.imgSrc} alt="" />
           </div>
 
           <div className="button-wrapper btn">
