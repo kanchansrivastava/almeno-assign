@@ -266,7 +266,7 @@
           height: 73px;
           width: 93%;
           padding: 1rem 1.5rem;
-          font-size: 1.4rem;
+          font-size: 1.3rem;
         }
       }
     }
@@ -280,7 +280,7 @@
     & .screen {
       height: 100%;
       & .wrapper {
-        padding: 2rem;
+        padding: 2rem 1rem;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -296,8 +296,8 @@
         }
         & .vessel {
           & img {
-            height: 275px;
-            width: 275px;
+            height: 250px;
+            width: 250px;
           }
         }
         & .camera-button {
@@ -309,7 +309,7 @@
           }
         }
         & .button-wrapper {
-          margin-top: 2rem;
+          margin-top: 0.5rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
