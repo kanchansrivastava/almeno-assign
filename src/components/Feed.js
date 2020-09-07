@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import dogSitting from "../images/dogSitting.svg";
 import vessel from "../images/vessel.svg";
-import foodSmall from "../images/foodSmall.png";
-import foodBig from "../images/foodBig.png";
+// import foodSmall from "../images/foodSmall.png";
+// import foodBig from "../images/foodBig.png";
 import { TweenMax } from "gsap";
 import { Howl } from "howler";
 
@@ -57,9 +57,10 @@ const Feed = ({ history, playSound, location }) => {
       <div className="food-big">
         <img
           src={
-            location.state?.imgSrc.length === 0
-              ? foodBig
-              : location.state.imgSrc
+            location.state.imgSrc
+            // location.state?.imgSrc?.length === 0
+            //   ? foodBig
+            //   : location.state.imgSrc
           }
           alt=""
           id="food-big-img"
@@ -80,9 +81,10 @@ const Feed = ({ history, playSound, location }) => {
               <img src={vessel} alt="" />
               <img
                 src={
-                  location.state.imgSrc.length === 0
-                    ? foodSmall
-                    : location.state.imgSrc
+                  location.state.imgSrc
+                  // location.state?.imgSrc?.length === 0
+                  //   ? foodSmall
+                  //   : location.state.imgSrc
                 }
                 alt=""
                 className="food-small"

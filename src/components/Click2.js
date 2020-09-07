@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import foodBig from "../images/foodBig.png";
-import camera from "../images/camera.svg";
+// import camera from "../images/camera.svg";
 import { Link } from "react-router-dom";
 import { Howl } from "howler";
 
-const Click = ({ playSound, history, location }) => {
+const Click2 = ({ playSound, history, location }) => {
   var clickSound = new Howl({
     src: ["../sounds/button-click.mp3"],
   });
@@ -27,7 +27,7 @@ const Click = ({ playSound, history, location }) => {
             <img src={foodBig} alt="" />
           </div>
 
-          <Link
+          {/* <Link
             className="camera-button btn"
             onClick={() => {
               handleButtonClick();
@@ -35,13 +35,16 @@ const Click = ({ playSound, history, location }) => {
             }}
           >
             <img src={camera} alt="" />
-          </Link>
+          </Link> */}
 
           <div className="button-wrapper btn">
             <Link
               className="share-button"
               to={{
                 pathname: "/feed",
+                state: {
+                  imgSrc: location.state.imgSrc,
+                },
               }}
               onClick={() => {
                 if (playSound) {
@@ -63,4 +66,4 @@ const Click = ({ playSound, history, location }) => {
   );
 };
 
-export default Click;
+export default Click2;
