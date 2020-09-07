@@ -29,7 +29,7 @@ const Feed = ({ history, playSound, location }) => {
       3,
       {
         scale: ".4",
-        borderRadius: "35%",
+        borderRadius: "25%",
         y: "-20%",
         rotateX: "88deg",
         height: "100%",
