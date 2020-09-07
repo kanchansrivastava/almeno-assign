@@ -194,6 +194,8 @@
       position: absolute;
       top: 17%;
       left: 50%;
+      width: 136px !important;
+      height: 29px !important;
       transform: translate(-50%, -50%);
       opacity: 0;
     }
@@ -215,6 +217,8 @@
         position: absolute;
         bottom: 4.9rem;
         right: 2rem;
+        width: 136px !important;
+        height: 29px !important;
       }
     }
   }
@@ -251,9 +255,9 @@
       z-index: 1;
       & img {
         // width: 280px;
-        width: 200px;
+        width: 200px !important;
         // height: 280px;
-        height: 200px;
+        height: 200px !important;
       }
     }
     & .vessel {
