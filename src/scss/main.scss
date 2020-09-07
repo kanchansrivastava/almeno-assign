@@ -191,6 +191,7 @@
     text-align: center;
     position: relative;
     & img.food-small {
+      border-radius: 100%;
       position: absolute;
       top: 17%;
       left: 50%;
@@ -213,6 +214,7 @@
       transform: scale(1.03);
 
       & .food-small {
+        border-radius: 100%;
         bottom: 0;
         position: absolute;
         bottom: 4.9rem;
@@ -236,15 +238,116 @@
   }
 }
 @media only screen and (max-width: 500px) {
+  .App {
+    margin: 0;
+    padding: 0;
+  }
+  & #home {
+    height: 100vh;
+    background: $bg-img no-repeat center;
+    background-size: cover;
+    width: 100%;
+    margin: 0 0;
+
+    & .screen {
+      margin: 0 0;
+      width: 100%;
+
+      & .sound-controller {
+        padding: 0;
+        margin: 0 0;
+        width: 100%;
+      }
+
+      & .wrapper {
+        & .feed-button {
+          margin-top: 5rem;
+          height: 73px;
+          width: 93%;
+          padding: 1rem 1.5rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  #click {
+    display: block;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+    background: #efdd38 no-repeat center;
+    & .screen {
+      height: 100%;
+      & .wrapper {
+        padding: 2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & .heading {
+          font-size: 52px;
+          color: #3d3838;
+          padding: 0 2rem;
+          margin-bottom: 2rem;
+          text-align: center;
+        }
+        & .vessel {
+          & img {
+            height: 275px;
+            width: 275px;
+          }
+        }
+        & .camera-button {
+          height: 75px;
+          width: 75px;
+          & img {
+            height: 40px;
+            width: 40px;
+          }
+        }
+        & .button-wrapper {
+          margin-top: 2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          & .share-button {
+            margin-top: 1rem;
+            height: 64px;
+            width: 236px;
+            background-color: $camera-bg;
+            padding: 1rem 2rem;
+            border-radius: 32px;
+            box-shadow: 2px 2.5px 0px 1px #921929;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            text-align: center;
+            font-size: 2rem;
+            color: #ffffff;
+            &:hover {
+              transform: scale(0.98);
+            }
+          }
+
+          & .take-button {
+            margin-top: 1.5rem;
+            color: #3d3838;
+            text-decoration: none;
+            text-align: center;
+            font-size: 2rem !important;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
   #feed {
     height: 100vh !important;
     position: relative;
-
-    & #home {
-      height: 100vh;
-      background: $bg-img no-repeat center;
-      background-size: cover;
-    }
 
     & .food-big {
       position: absolute;

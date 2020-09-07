@@ -27,16 +27,6 @@ const Click2 = ({ playSound, history, location }) => {
             <img src={foodBig} alt="" />
           </div>
 
-          {/* <Link
-            className="camera-button btn"
-            onClick={() => {
-              handleButtonClick();
-              history.push("/camera");
-            }}
-          >
-            <img src={camera} alt="" />
-          </Link> */}
-
           <div className="button-wrapper btn">
             <Link
               className="share-button"
@@ -56,7 +46,13 @@ const Click2 = ({ playSound, history, location }) => {
             >
               Share with Milo
             </Link>
-            <h2 className="take-button btn" onClick={handleButtonClick}>
+            <h2
+              className="take-button btn"
+              onClick={() => {
+                handleButtonClick();
+                history.push({ pathname: "/click" });
+              }}
+            >
               Take again
             </h2>
           </div>

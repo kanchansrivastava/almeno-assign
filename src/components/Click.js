@@ -38,7 +38,7 @@ const Click = ({ playSound, history, location }) => {
           </Link>
 
           <div className="button-wrapper btn">
-            <Link
+            {/* <Link
               className="share-button"
               to={{
                 pathname: "/feed",
@@ -55,7 +55,7 @@ const Click = ({ playSound, history, location }) => {
             </Link>
             <h2 className="take-button btn" onClick={handleButtonClick}>
               Take again
-            </h2>
+            </h2> */}
           </div>
         </div>
       </div>

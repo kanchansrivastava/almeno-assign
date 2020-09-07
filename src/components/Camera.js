@@ -1,6 +1,5 @@
 import React from "react";
 import Webcam from "react-webcam";
-import { useState } from "react";
 
 const Camera = ({ playSound, history }) => {
   const videoConstraints = {
@@ -9,14 +8,10 @@ const Camera = ({ playSound, history }) => {
     facingMode: { exact: "environment" },
   };
   const webcamRef = React.useRef(null);
-  const [imagevar, setimagevar] = useState("");
 
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
-    setimagevar(imageSrc);
-    setTimeout(() => {
-      history.push({ pathname: "/click2", state: { imgSrc: imageSrc } });
-    }, 3000);
+    history.push({ pathname: "/click2", state: { imgSrc: imageSrc } });
   }, [webcamRef, history]);
   return (
     <div style={{ textAlign: "center" }}>
@@ -29,8 +24,9 @@ const Camera = ({ playSound, history }) => {
         videoConstraints={videoConstraints}
         style={{ display: "block" }}
       />
-      <button onClick={capture}>Capture photo</button>
-      <img src={imagevar} alt="" height="100" width="100" />
+      <button onClick={capture} style={{ marginTop: "4rem" }}>
+        Capture photo
+      </button>
     </div>
   );
 };

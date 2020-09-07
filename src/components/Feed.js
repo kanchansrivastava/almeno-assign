@@ -59,12 +59,7 @@ const Feed = ({ history, playSound, location }) => {
     <div id="feed">
       <div className="food-big">
         <img
-          src={
-            location.state.imgSrc
-            // location.state?.imgSrc?.length === 0
-            //   ? foodBig
-            //   : location.state.imgSrc
-          }
+          src={location.state.imgSrc}
           alt=""
           id="food-big-img"
           ref={(element) => (foodBigQuery = element)}
@@ -83,12 +78,7 @@ const Feed = ({ history, playSound, location }) => {
             <div className="vessel">
               <img src={vessel} alt="" />
               <img
-                src={
-                  location.state.imgSrc
-                  // location.state?.imgSrc?.length === 0
-                  //   ? foodSmall
-                  //   : location.state.imgSrc
-                }
+                src={location.state.imgSrc}
                 alt=""
                 className="food-small"
                 ref={(element) => (foodSmallQuery = element)}

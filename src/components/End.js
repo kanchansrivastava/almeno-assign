@@ -41,9 +41,9 @@ const End = ({ history, playSound }) => {
       yoyo: true,
       repeat: 3,
     });
-    setTimeout(() => {
-      history.push("/");
-    }, 3000);
+    // setTimeout(() => {
+    //   history.push("/");
+    // }, 3000);
   }, [dogImageQuery, history]);
   return (
     <div id="end">
