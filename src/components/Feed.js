@@ -6,7 +6,7 @@ import foodBig from "../images/foodBig.png";
 import { TweenMax } from "gsap";
 import { Howl } from "howler";
 
-const Feed = ({ history, playSound }) => {
+const Feed = ({ history, playSound, location }) => {
   let foodBigQuery = useRef(null);
   let foodSmallQuery = useRef(null);
   let dogImageQuery = useRef(null);
@@ -56,7 +56,9 @@ const Feed = ({ history, playSound }) => {
     <div id="feed">
       <div className="food-big">
         <img
-          src={foodBig}
+          src={
+            location.state.imgSrc.length === 0 ? foodBig : location.state.imgSrc
+          }
           alt=""
           id="food-big-img"
           ref={(element) => (foodBigQuery = element)}
@@ -75,7 +77,11 @@ const Feed = ({ history, playSound }) => {
             <div className="vessel">
               <img src={vessel} alt="" />
               <img
-                src={foodSmall}
+                src={
+                  location.state.imgSrc.length === 0
+                    ? foodSmall
+                    : location.state.imgSrc
+                }
                 alt=""
                 className="food-small"
                 ref={(element) => (foodSmallQuery = element)}

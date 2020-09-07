@@ -4,7 +4,7 @@ import camera from "../images/camera.svg";
 import { Link } from "react-router-dom";
 import { Howl } from "howler";
 
-const Click = ({ playSound, history }) => {
+const Click = ({ playSound, history, location }) => {
   var clickSound = new Howl({
     src: ["../sounds/button-click.mp3"],
   });
@@ -26,37 +26,43 @@ const Click = ({ playSound, history }) => {
           <div className="vessel">
             <img src={foodBig} alt="" />
           </div>
-          {!photoTaken ? (
+
+          <Link
+            className="camera-button btn"
+            onClick={() => {
+              handleButtonClick();
+              history.push("/camera");
+            }}
+          >
+            <img src={camera} alt="" />
+          </Link>
+
+          <div className="button-wrapper btn">
             <Link
-              className="camera-button btn"
-              // to={{ pathname: "/click" }}
+              className="share-button"
+              to={{
+                pathname: "/feed",
+                state: {
+                  imgSrc:
+                    location.state?.imgSrc?.length !== ""
+                      ? location.state?.imgSrc
+                      : foodBig,
+                },
+              }}
               onClick={() => {
-                handleButtonClick();
-                history.push("/camera");
+                if (playSound) {
+                  clickSound.play();
+                } else {
+                  clickSound.stop();
+                }
               }}
             >
-              <img src={camera} alt="" />
+              Share with Milo
             </Link>
-          ) : (
-            <div className="button-wrapper btn">
-              <Link
-                className="share-button"
-                to={{ pathname: "/feed" }}
-                onClick={() => {
-                  if (playSound) {
-                    clickSound.play();
-                  } else {
-                    clickSound.stop();
-                  }
-                }}
-              >
-                Share with Milo
-              </Link>
-              <h2 className="take-button btn" onClick={handleButtonClick}>
-                Take again
-              </h2>
-            </div>
-          )}
+            <h2 className="take-button btn" onClick={handleButtonClick}>
+              Take again
+            </h2>
+          </div>
         </div>
       </div>
     </div>

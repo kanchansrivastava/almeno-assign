@@ -2,11 +2,11 @@ import React from "react";
 import Webcam from "react-webcam";
 import { useState } from "react";
 
-const Camera = ({ playSound }) => {
+const Camera = ({ playSound, history }) => {
   const videoConstraints = {
-    width: 1280,
-    height: 720,
-    facingMode: "user",
+    width: 420,
+    height: 420,
+    facingMode: { exact: "environment" },
   };
   const webcamRef = React.useRef(null);
   const [imagevar, setimagevar] = useState("");
@@ -14,6 +14,7 @@ const Camera = ({ playSound }) => {
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
     setimagevar(imageSrc);
+    history.push({ pathname: "/click", state: { imgSrc: imagevar } });
   }, [webcamRef]);
   return (
     <div style={{ textAlign: "center" }}>
