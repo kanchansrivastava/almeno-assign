@@ -15,7 +15,7 @@ const Camera = ({ playSound, history }) => {
     const imageSrc = webcamRef.current.getScreenshot();
     setimagevar(imageSrc);
     history.push({ pathname: "/click", state: { imgSrc: imagevar } });
-  }, [webcamRef]);
+  }, [webcamRef, history, imagevar]);
   return (
     <div style={{ textAlign: "center" }}>
       <Webcam
