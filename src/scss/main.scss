@@ -250,8 +250,10 @@
       transform: translate(-50%, -50%);
       z-index: 1;
       & img {
-        width: 280px;
-        height: 280px;
+        // width: 280px;
+        width: 200px;
+        // height: 280px;
+        height: 200px;
       }
     }
     & .vessel {

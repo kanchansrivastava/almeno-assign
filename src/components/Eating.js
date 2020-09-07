@@ -5,7 +5,7 @@ import foodSmall from "../images/foodSmall.png";
 import { TweenMax } from "gsap";
 import { Howl } from "howler";
 
-const Eating = ({ history, playSound }) => {
+const Eating = ({ history, playSound, location }) => {
   let dogImageQuery = useRef(null);
   useEffect(() => {
     TweenMax.to(dogImageQuery, 2, { opacity: 1, scale: 1 });
@@ -37,7 +37,11 @@ const Eating = ({ history, playSound }) => {
             <div className="wrapper">
               <div className="dog" ref={(ele) => (dogImageQuery = ele)}>
                 <img src={dogEating} alt="" />
-                <img src={foodSmall} alt="" className="food-small" />
+                <img
+                  src={location.state.imgSrc}
+                  alt=""
+                  className="food-small"
+                />
               </div>
             </div>
           </div>

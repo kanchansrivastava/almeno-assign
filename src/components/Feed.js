@@ -48,7 +48,10 @@ const Feed = ({ history, playSound, location }) => {
     );
 
     setTimeout(() => {
-      history.push("/eating");
+      history.push({
+        pathname: "/eating",
+        state: { imgSrc: location.state.imgSrc },
+      });
     }, 3000);
   }, [foodBigQuery, dogImageQuery, history, playSound]);
 
