@@ -57,7 +57,9 @@ const Feed = ({ history, playSound, location }) => {
       <div className="food-big">
         <img
           src={
-            location.state.imgSrc.length === 0 ? foodBig : location.state.imgSrc
+            location.state?.imgSrc.length === 0
+              ? foodBig
+              : location.state.imgSrc
           }
           alt=""
           id="food-big-img"

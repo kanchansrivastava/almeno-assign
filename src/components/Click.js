@@ -43,10 +43,10 @@ const Click = ({ playSound, history, location }) => {
               to={{
                 pathname: "/feed",
                 state: {
-                  imgSrc:
-                    location.state?.imgSrc?.length !== 0
-                      ? location.state?.imgSrc
-                      : foodBig,
+                  imgSrc: location.state?.imgSrc,
+                  // location.state?.imgSrc?.length !== 0
+                  //   ? location.state?.imgSrc
+                  //   : foodBig,
                 },
               }}
               onClick={() => {
