@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import foodBig from "../images/foodBig.png";
+// import foodBig from "../images/foodBig.png";
 // import camera from "../images/camera.svg";
 import { Link } from "react-router-dom";
 import { Howl } from "howler";
