@@ -14,7 +14,9 @@ const Camera = ({ playSound, history }) => {
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
     setimagevar(imageSrc);
-    history.push({ pathname: "/click", state: { imgSrc: imagevar } });
+    setTimeout(() => {
+      history.push({ pathname: "/click", state: { imgSrc: imagevar } });
+    }, 3000);
   }, [webcamRef, history, imagevar]);
   return (
     <div style={{ textAlign: "center" }}>
@@ -28,7 +30,7 @@ const Camera = ({ playSound, history }) => {
         style={{ display: "block" }}
       />
       <button onClick={capture}>Capture photo</button>
-      <p>{imagevar}</p>
+      <img src={imagevar} alt="" height="100" width="100" />
     </div>
   );
 };

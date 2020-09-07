@@ -44,7 +44,7 @@ const Click = ({ playSound, history, location }) => {
                 pathname: "/feed",
                 state: {
                   imgSrc:
-                    location.state?.imgSrc?.length !== ""
+                    location.state?.imgSrc?.length !== 0
                       ? location.state?.imgSrc
                       : foodBig,
                 },
