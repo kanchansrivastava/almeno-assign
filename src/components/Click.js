@@ -22,6 +22,7 @@ const Click = ({ playSound, history, location }) => {
     <div id="click">
       <div className="screen">
         <div className="wrapper">
+          <div className="heading">Click a picture of your meal</div>
           <Camera playSound={playSound} history={history}/>
         </div>
       </div>

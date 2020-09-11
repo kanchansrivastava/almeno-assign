@@ -25,7 +25,7 @@ const Camera = ({ playSound, history }) => {
         style={{ display: "block" }}
       />
 
-      <span className="camera-button btn" style={{ marginTop: "4rem" , marginLeft: "10rem"}} onClick={capture}>
+      <span className="camera-button btn" style={{marginLeft: "10rem"}} onClick={capture}>
         <img src={camera} alt="" />
       </span>
     </div>
