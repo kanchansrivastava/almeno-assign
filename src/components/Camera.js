@@ -6,7 +6,7 @@ const Camera = ({ playSound, history }) => {
   const videoConstraints = {
     width: 390,
     height: 390,
-//    facingMode: { exact: "environment" },
+    facingMode: { exact: "environment" },
   };
   const webcamRef = React.useRef(null);
 
