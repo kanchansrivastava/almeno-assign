@@ -69,7 +69,7 @@
     margin-top: 5rem;
 }
 #home .wrapper .feed-button {
-    margin-top: 2rem;
+    margin-top: 0rem;
     height: 73px;
     width: 90%;
     background-color: #f3de20;
@@ -299,7 +299,7 @@
         padding: 1rem 2rem 2rem;
     }
     #home .screen .wrapper .feed-button {
-        margin-top: 4rem;
+        margin-top: 0rem;
         height: 73px;
         width: 93%;
         padding: 1rem 1.5rem;
