@@ -22,7 +22,7 @@ const Camera = ({ playSound, history }) => {
         ref={webcamRef}
         screenshotFormat="image/jpeg"
         videoConstraints={videoConstraints}
-        style={{ display: "block", border-radius: 50%;}}
+        style={{ display: "block";border-radius: 50%;}}
       />
 
       <span className="camera-button btn" style={{marginLeft: "10rem"}} onClick={capture}>
