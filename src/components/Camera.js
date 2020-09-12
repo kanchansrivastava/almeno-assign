@@ -4,8 +4,8 @@ import camera from "../images/camera.svg";
 
 const Camera = ({ playSound, history }) => {
   const videoConstraints = {
-    width: 350,
-    height: 350,
+    width: 320,
+    height: 320,
     facingMode: { exact: "environment" }
   };
   const webcamRef = React.useRef(null);
@@ -25,7 +25,7 @@ const Camera = ({ playSound, history }) => {
         style={{ display: "block", borderRadius: "50%"}}
       />
 
-      <span className="camera-button btn" style={{marginLeft: "10rem"}} onClick={capture}>
+      <span className="camera-button btn" style={{marginLeft: "8rem"}} onClick={capture}>
         <img src={camera} alt="" />
       </span>
     </div>
