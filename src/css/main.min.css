@@ -66,10 +66,10 @@
     align-items: center;
 }
 #home .wrapper .dog {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
 }
 #home .wrapper .feed-button {
-    margin-top: 2rem;
+    margin-top: 0rem;
     height: 73px;
     width: 90%;
     background-color: #f3de20;
@@ -140,7 +140,7 @@
     width: 345px;
 }
 #click .screen .wrapper .camera-button {
-    margin-top: 2rem;
+    margin-top: 0rem;
     height: 90px;
     width: 90px;
     background-color: #cf2c42;
@@ -299,7 +299,7 @@
         padding: 1rem 2rem 2rem;
     }
     #home .screen .wrapper .feed-button {
-        margin-top: 4rem;
+        margin-top: 0rem;
         height: 73px;
         width: 93%;
         padding: 1rem 1.5rem;
@@ -340,6 +340,7 @@
         text-align: center;
     }
     #click .screen .wrapper .vessel img {
+        border-radius: 50%;
         height: 250px;
         width: 250px;
     }
