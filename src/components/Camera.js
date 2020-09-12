@@ -4,9 +4,9 @@ import camera from "../images/camera.svg";
 
 const Camera = ({ playSound, history }) => {
   const videoConstraints = {
-    width: 390,
-    height: 390,
-    facingMode: { exact: "environment" },
+    width: 350,
+    height: 350,
+    facingMode: { exact: "environment" }
   };
   const webcamRef = React.useRef(null);
 
@@ -22,7 +22,7 @@ const Camera = ({ playSound, history }) => {
         ref={webcamRef}
         screenshotFormat="image/jpeg"
         videoConstraints={videoConstraints}
-        style={{ display: "block" }}
+        style={{ display: "block", border-radius: 50%;}}
       />
 
       <span className="camera-button btn" style={{marginLeft: "10rem"}} onClick={capture}>
