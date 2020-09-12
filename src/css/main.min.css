@@ -136,6 +136,7 @@
     text-align: center;
 }
 #click .screen .wrapper .vessel img {
+    border-radius: 50%;
     height: 345px;
     width: 345px;
 }
