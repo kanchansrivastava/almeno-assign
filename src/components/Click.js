@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import Camera from "./Camera"
 
 const Click = ({ playSound, musicSound, history, location }) => {
+  musicSound.current.stop();
   musicSound.current.play();
   return (
     <div id="click">
