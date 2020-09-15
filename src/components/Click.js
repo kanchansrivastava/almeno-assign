@@ -4,20 +4,8 @@ import React, { useState } from "react";
 //import { Howl } from "howler";
 import Camera from "./Camera"
 
-const Click = ({ playSound, history, location }) => {
-//  var clickSound = new Howl({
-//    src: ["../sounds/button-click.mp3"],
-//  });
-//  const [photoTaken, setPhotoTaken] = useState(false);
-//  const handleButtonClick = (e) => {
-//    if (playSound) {
-//      clickSound.play();
-//    } else {
-//      clickSound.stop();
-//    }
-//    setPhotoTaken(!photoTaken);
-//  };
-
+const Click = ({ playSound, musicSound, history, location }) => {
+  musicSound.current.play();
   return (
     <div id="click">
       <div className="screen">

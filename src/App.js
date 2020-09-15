@@ -18,34 +18,12 @@ function App() {
   let musicSound = useRef(
     new Howl({
       loop: true,
-      autoplay: true,
+      autoplay: false,
       volume: 0.2,
       src: ["./sounds/bg1.mp3"],
     })
   );
-  // var musicSound;
-  useEffect(() => {
-    // musicSound = new Howl({
-    //   loop: true,
-    //   autoplay: true,
-    //   volume: 0.2,
-    //   src: ["./sounds/bg1.mp3"],
-    // });
-    if (playMusic) {
-      musicSound.current.play();
-    } else {
-      musicSound.current.stop();
-    }
-  }, [playMusic]);
 
-  const handleMusicSetting = (e) => {
-    playMusic !== true ? musicSound.current.play() : musicSound.current.stop();
-    setPlayMusic(!playMusic);
-  };
-  const handleSoundSetting = (e) => {
-    setPlaySound(!playSound);
-    // musicSound.current === true ? musicSound.current.play() : musicSound.current.stop();
-  };
   return (
     <div className="App">
       <Router>
@@ -56,17 +34,18 @@ function App() {
             render={(props) => (
               <Home
                 {...props}
-                playMusic={playMusic}
+                musicSound={musicSound}
                 playSound={playSound}
-                handleMusicSetting={handleMusicSetting}
-                handleSoundSetting={handleSoundSetting}
               />
             )}
           />
           <Route
             path="/click"
             exact
-            render={(props) => <Click {...props} playSound={playSound} />}
+            render={(props) => <Click {...props}
+            musicSound={musicSound}
+            playSound={playSound}
+            />}
           />
           <Route
             path="/click2"

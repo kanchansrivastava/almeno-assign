@@ -6,29 +6,19 @@ import leafyGreen from "../images/leafyGreen.png";
 import { Link } from "react-router-dom";
 import { Howl } from "howler";
 const Home = ({
-  playMusic,
-  playSound,
-  handleMusicSetting,
-  handleSoundSetting,
+    musicSound,
+    playSound
 }) => {
   var clickSound = new Howl({
     src: ["../sounds/button-click.mp3"],
   });
 
+  musicSound.current.stop();
+
   return (
     <div id="home">
       <div className="screen">
         <div className="sound-controller">
-          {/* <i
-            className="fas fa-music"
-            style={{ color: !playMusic && "#fff" }}
-            onClick={handleMusicSetting}
-          ></i> */}
-          {/* <i
-            className="fas fa-volume-up"
-            style={{ color: !playSound && "#fff" }}
-            onClick={handleSoundSetting}
-          ></i> */}
         </div>
         <div className="wrapper">
           <div className="dog">
